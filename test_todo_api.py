@@ -1,14 +1,8 @@
-import unittest
 from tasks import create_task, update_task, get_task, list_tasks, delete_task
 from test_utils import new_task_payload
 
 
-class TestToDoAPI(unittest.TestCase):
-    # Rellevant only at first to check the endpoint connection
-    # def test_can_call_endpoint():
-    #     response = requests.get(ENDPOINT)
-    #     assert response.status_code == 200
-
+class TestToDoAPI():
     def test_can_create_task(self):
         payload = new_task_payload()
 
