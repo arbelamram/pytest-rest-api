@@ -79,7 +79,3 @@ class TestToDoAPI():
         # Get the task, and check that it's not found.
         get_task_response = get_task(task_id)
         assert get_task_response.status_code == 404
-
-
-if __name__ == "__main__":
-    unittest.main()
