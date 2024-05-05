@@ -17,4 +17,5 @@ def list_tasks(user_id):
 def delete_task(task_id):
     return requests.delete(f"{ENDPOINT}/delete-task/{task_id}")
 
-
+def check_status_code(response, expected_status_code):
+    assert response.status_code == expected_status_code
