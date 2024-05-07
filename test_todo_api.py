@@ -1,33 +1,28 @@
-from tasks import create_task, update_task, get_task, list_tasks, delete_task, check_status_code
+import pytest
+from tasks import ToDoAPI
 from test_utils import new_task_payload
 
-
 class TestToDoAPI():
-    def test_can_create_task(self):
+    @pytest.fixture(scope="class")
+    def api_instance(self):
+        return ToDoAPI()
+
+    def test_can_create_task(self, api_instance):
         payload = new_task_payload()
-
-        create_task_response = create_task(payload)
-        check_status_code(create_task_response, 200)
-
-        data = create_task_response.json()
-
-        task_id = data["task"]["task_id"]
-        get_task_response = get_task(task_id)
-
-        check_status_code(get_task_response, 200)
-        get_task_data = get_task_response.json()
+        create_task_response = api_instance.create_task(payload)
+        task_id = create_task_response["task"]["task_id"]
+        get_task_response = api_instance.get_task(task_id)
+        get_task_data = get_task_response
+        
         assert get_task_data["content"] == payload["content"]
         assert get_task_data["user_id"] == payload["user_id"]
 
 
-    def test_can_update_task(self):
-        
-        # create a new task
+    def test_can_update_task_details(self, api_instance):
         payload = new_task_payload()
-        create_task_response = create_task(payload)
-        task_id = create_task_response.json()["task"]["task_id"]
+        create_task_response = api_instance.create_task(payload)
+        task_id = create_task_response["task"]["task_id"]
 
-        # update the task
         new_payload = {
             "user_id" : payload["user_id"],
             "task_id" : task_id,
@@ -35,47 +30,33 @@ class TestToDoAPI():
             "is_done" : True,
         }
 
-        update_task_response = update_task(new_payload)
-        check_status_code(update_task_response, 200)
+        api_instance.update_task_details(new_payload)
 
-        # get and validate the changes
-        get_task_response = get_task(task_id)
-        check_status_code(get_task_response, 200)
-        get_task_data = get_task_response.json()
+        get_task_response = api_instance.get_task(task_id)
+        get_task_data = get_task_response
+
         assert get_task_data["content"] == new_payload["content"]
         assert get_task_data["is_done"] == new_payload["is_done"]
 
 
-    def test_can_list_tasks(self):
-        # create N tasks
+    def test_can_list_tasks(self, api_instance):
         N = 3
         payload = new_task_payload()
 
         for _ in range(N):
-            create_task_response = create_task(payload)
-            check_status_code(create_task_response, 200)
+            api_instance.create_task(payload)
 
-        # List tasks, and check that there are N items
         user_id = payload["user_id"]
-        list_task_response = list_tasks(user_id)
-        check_status_code(list_task_response, 201)
-        data = list_task_response.json()
+        list_task_response = api_instance.get_tasks_list(user_id)
+        data = list_task_response
 
         tasks = data["tasks"]
         assert len(tasks) == N
 
 
-    def test_can_delete_task(self):
-        # Create a task.
+    def test_can_delete_task(self, api_instance):
         payload = new_task_payload()
-        create_task_response = create_task(payload)
-        check_status_code(create_task_response, 200)
-        task_id = create_task_response.json()["task"]["task_id"]
+        create_task_response = api_instance.create_task(payload)
+        task_id = create_task_response["task"]["task_id"]
 
-        # delete the task.
-        delete_task_response = delete_task(task_id)
-        check_status_code(delete_task_response, 200)
-
-        # Get the task, and check that it's not found.
-        get_task_response = get_task(task_id)
-        check_status_code(get_task_response, 404)
+        api_instance.delete_task(task_id)
