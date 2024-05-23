@@ -17,7 +17,7 @@ class TestToDoAPI():
         assert get_task_data["content"] == payload["content"]
         assert get_task_data["user_id"] == payload["user_id"]
 
-    def test_can_list_tasks(self, api_instance):
+    def test_can_read_tasks_list(self, api_instance):
             N = 3
             payload = new_task_payload()
 
