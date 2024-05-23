@@ -26,8 +26,3 @@ class ToDoAPI:
     
     def delete_task(self, task_id):
         self._request('DELETE', f'/delete-task/{task_id}')
-        try:
-            self.get_task(task_id)
-        except requests.exceptions.HTTPError as e:
-            if e.response.status_code != 404:
-                raise
