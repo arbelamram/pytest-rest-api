@@ -19,7 +19,7 @@ class TestToDoAPI:
         task_id = create_task_response["task"]["task_id"]
         return task_id, task_payload
 
-    def test_can_create_task(self, api_instance, task_payload, created_task):
+    def test_can_create_task(self, api_instance, created_task):
         task_id, payload = created_task
         get_task_data = api_instance.get_task(task_id)
 
