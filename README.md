@@ -41,9 +41,10 @@ This approach provides several benefits:
 ### Project Structure
 The project consists of the following files:
 
-* `test_utils.py`: Utility functions to generate new task payloads.</br>
 * `todo_api.py`: A wrapper class to interact with the ToDo API endpoints.</br>
-* `test_todo_api.py`: Test cases written with Pytest to validate the functionality of the ToDo API.</br>
+* tests/
+    * `test_utils.py`: Utility functions to generate new task payloads.</br>
+    * `test_todo_api.py`: Test cases written with Pytest to validate the functionality of the ToDo API.</br>
 
 ##
 
@@ -68,12 +69,22 @@ You can install them using pip:
     pip install pytest requests
     ```
 
-2. **Run the Tests**:
-Execute the tests using Pytest:
-
-    ```sh
+2. **Run the Tests**: concurrently OR single
+* Execute all the tests using Pytest: (concurrently)</br>
+    ```
     pytest-rest-api> python -m pytest -v -s tests\test_todo_api.py
     ```
+    
+* Execute a specific test using Pytest: (single)
+
+    ```
+    pytest-rest-api> python -m pytest -v -s tests\test_todo_api.py::TestToDoAPI::<TEST_NAME>
+    ```
+    * Replace <TEST_NAME> with either one of the tests: (CRUD)
+        1. test_can_create_task
+        2. test_can_read_tasks_list
+        3. test_can_update_task_details
+        4. test_can_delete_task
 
 ##
 
