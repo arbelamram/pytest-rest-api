@@ -10,8 +10,8 @@ By following the principles of OOP, the code is modular, maintainable, and easy 
 - [Technologies and Tools](#technologies-and-tools)
 - [Object-Oriented Programming (OOP)](#object-oriented-programming-oop)
 - [Project Structure](#project-structure)
-- [Tests](#tests)
 - [Getting Started](#getting-started)
+- [Tests](#tests)
 - [Contributing](#contributing)
 
 ##
