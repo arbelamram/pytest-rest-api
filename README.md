@@ -3,6 +3,7 @@
 ### Overview
 This project demonstrates how to test a REST API using Pytest.</br>
 It includes utility functions to generate task payloads, a wrapper around the ToDo API to facilitate interaction with the endpoints, and a suite of tests to verify the functionality of the API.</br>
+By following the principles of OOP, the code is modular, maintainable, and easy to extend.</br>
 
 ### Table of Contents
 - [Objectives](#Objectives)
@@ -12,8 +13,8 @@ It includes utility functions to generate task payloads, a wrapper around the To
 - [Tests](#tests)
 - [Getting Started](#getting-started)
 - [Contributing](#contributing)
-- [Conclusion](#conclusion)
 
+##
 
 ### Objectives
 * **Automate API Testing**: To automate the process of testing the ToDo API to ensure its endpoints are functioning correctly.</br>
@@ -36,14 +37,21 @@ The project employs OOP principles in the design of the `ToDoAPI` class. This ap
 ### Project Structure
 The project consists of the following files:
 
-* test_utils.py: Utility functions to generate new task payloads.</br>
+* `test_utils.py`: Utility functions to generate new task payloads.</br>
 This module contains utility functions to assist in generating test data.</br>
-* todo_api.py: A wrapper class to interact with the ToDo API endpoints.</br>
+* `todo_api.py`: A wrapper class to interact with the ToDo API endpoints.</br>
 This module contains the ToDoAPI class, which provides methods to interact with the ToDo API.</br>
 
-* test_todo_api.py: Test cases written with Pytest to validate the functionality of the ToDo API.</br>
+* `test_todo_api.py`: Test cases written with Pytest to validate the functionality of the ToDo API.</br>
 This module contains test cases written using Pytest to validate the functionality of the ToDo API.</br>
 
+##
+
+### Getting Started
+Clone the Repository: `git clone <repository-url>`</br>
+Install Dependencies: `pip install -r requirements.txt`</br>
+Configure Environment: Update test_config.yaml and environment variables.</br>
+Run Tests: Execute pytest in the terminal.</br>
 
 ### Tests
 - **Unit Testing:** PyTest for Python
@@ -65,18 +73,8 @@ This module contains test cases written using Pytest to validate the functionali
         pytest test_todo_api.py
         ```
 
-### Getting Started
-Clone the Repository: `git clone <repository-url>`</br>
-Install Dependencies: `pip install -r requirements.txt`</br>
-Configure Environment: Update test_config.yaml and environment variables.</br>
-Run Tests: Execute pytest in the terminal.</br>
+##
 
 ### Contributing
 Contributions to the project are welcome.</br>
 Please fork the repository, create a feature branch, and submit a pull request for review.</br>
-
-<!-- ## -->
-
-### Conclusion
-This project provides a comprehensive approach to testing a REST API using Pytest, ensuring that the endpoints perform as expected.</br>
-By following the principles of OOP, the code is modular, maintainable, and easy to extend.</br>
