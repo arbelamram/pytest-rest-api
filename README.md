@@ -72,7 +72,7 @@ You can install them using pip:
 Execute the tests using Pytest:
 
     ```sh
-    pytest test_todo_api.py
+    pytest-rest-api> python -m pytest -v -s tests\test_todo_api.py
     ```
 
 ##
