@@ -51,16 +51,16 @@ This module contains test cases written using Pytest to validate the functionali
 ##
 
 ### Getting Started
-Clone the Repository: `git clone <repository-url>`</br>
-Install Dependencies: `pip install -r requirements.txt`</br>
-Configure Environment: Update test_config.yaml and environment variables.</br>
-Run Tests: Execute pytest in the terminal.</br>
+* **Clone the Repository**: `git clone <repository-url>`</br>
+* **Install Dependencies**: `pip install -r requirements.txt`</br>
+* **Configure Environment**: Update test_config.yaml and environment variables.</br>
+* **Run Tests**: Execute pytest in the terminal.</br>
 
 
 ### Tests
-- **Unit Testing:** PyTest for Python
-- **Integration Testing:** Postman for API testing
-- **End-to-End Testing:** Selenium for web applications
+* **Unit Testing**: PyTest for Python
+* **Integration Testing**: Postman for API testing
+* **End-to-End Testing**: Selenium for web applications
 
     ### How to Run the Tests
     1. **Install Dependencies**:
