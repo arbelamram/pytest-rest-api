@@ -17,7 +17,7 @@ By following the principles of OOP, the code is modular, maintainable, and easy 
 ##
 
 ### Objectives
-* **Automate API Testing**: To automate the process of testing the ToDo API to ensure its endpoints are functioning correctly.
+* **Automate API Testing**: To automate the ToDo API testing process to ensure its endpoints are functioning correctly.
 * **Verify CRUD Operations**: To verify that the Create, Read, Update, and Delete operations of the ToDo API work as expected.
 * **Demonstrate Pytest Usage**: To demonstrate the use of Pytest for testing REST APIs.
 * **Utilize OOP Principles**: To utilize Object-Oriented Programming principles in designing the API wrapper.
@@ -42,12 +42,8 @@ This approach provides several benefits:
 The project consists of the following files:
 
 * `test_utils.py`: Utility functions to generate new task payloads.</br>
-This module contains utility functions to assist in generating test data.
 * `todo_api.py`: A wrapper class to interact with the ToDo API endpoints.</br>
-This module contains the ToDoAPI class, which provides methods to interact with the ToDo API.
-
 * `test_todo_api.py`: Test cases written with Pytest to validate the functionality of the ToDo API.</br>
-This module contains test cases written using Pytest to validate the functionality of the ToDo API.
 
 ##
 
