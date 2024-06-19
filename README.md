@@ -14,7 +14,6 @@ By following the principles of OOP, the code is modular, maintainable, and easy 
 - [Tests](#tests)
 - [Getting Started](#getting-started)
 - [Contributing](#contributing)
-</br>
 
 ##
 
@@ -48,8 +47,7 @@ This module contains utility functions to assist in generating test data.</br>
 This module contains the ToDoAPI class, which provides methods to interact with the ToDo API.</br>
 
 * `test_todo_api.py`: Test cases written with Pytest to validate the functionality of the ToDo API.</br>
-This module contains test cases written using Pytest to validate the functionality of the ToDo API.</br>
-</br>
+This module contains test cases written using Pytest to validate the functionality of the ToDo API.
 
 ##
 
@@ -79,7 +77,6 @@ Run Tests: Execute pytest in the terminal.</br>
         ```sh
         pytest test_todo_api.py
         ```
-</br>
 
 ##
 
