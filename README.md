@@ -4,7 +4,6 @@
 This project demonstrates how to test a REST API using Pytest.</br>
 It includes utility functions to generate task payloads, a wrapper around the ToDo API to facilitate interaction with the endpoints, and a suite of tests to verify the functionality of the API.</br>
 By following the principles of OOP, the code is modular, maintainable, and easy to extend.</br>
-</br>
 
 ### Table of Contents
 - [Objectives](#Objectives)
@@ -22,13 +21,13 @@ By following the principles of OOP, the code is modular, maintainable, and easy 
 * **Verify CRUD Operations**: To verify that the Create, Read, Update, and Delete operations of the ToDo API work as expected.</br>
 * **Demonstrate Pytest Usage**: To demonstrate the use of Pytest for testing REST APIs.</br>
 * **Utilize OOP Principles**: To utilize Object-Oriented Programming principles in designing the API wrapper.</br>
-</br>
+
 
 ### Technologies and Tools
 * **Python**: The primary programming language used for writing the API wrapper and tests.</br>
 * **Pytest**: A testing framework used for writing and running the tests.</br>
 * **Requests**: A Python library for making HTTP requests to interact with the ToDo API.</br>
-</br>
+
 
 ### Object-Oriented Programming (OOP)
 The project employs OOP principles in the design of the `ToDoAPI` class. This approach provides several benefits:
@@ -36,7 +35,7 @@ The project employs OOP principles in the design of the `ToDoAPI` class. This ap
 * **Encapsulation**: The ToDoAPI class encapsulates all the methods required to interact with the API, making the code modular and reusable.
 * **Abstraction**: The internal workings of the API requests are abstracted away from the test cases, providing a clean and simple interface for interacting with the API.
 * **Maintainability**: Any changes to the API endpoints or methods can be managed within the `ToDoAPI` class without affecting the test cases directly.</br>
-</br>
+
 
 ### Project Structure
 The project consists of the following files:
@@ -56,7 +55,7 @@ Clone the Repository: `git clone <repository-url>`</br>
 Install Dependencies: `pip install -r requirements.txt`</br>
 Configure Environment: Update test_config.yaml and environment variables.</br>
 Run Tests: Execute pytest in the terminal.</br>
-</br>
+
 
 ### Tests
 - **Unit Testing:** PyTest for Python
