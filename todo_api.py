@@ -8,7 +8,6 @@ import logging
 # Load environment variables from .env file
 load_dotenv()
 
-# Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -25,7 +24,7 @@ class ToDoAPI:
 
     def _request(self, method, endpoint, **kwargs):
         url = f"{self.BASE_URL}{endpoint}"
-        kwargs.setdefault('timeout', 10)  # Set a default timeout of 10 seconds
+        kwargs.setdefault('timeout', 10)
         try:
             response = self.session.request(method, url, **kwargs)
             response.raise_for_status()
