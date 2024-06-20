@@ -43,9 +43,8 @@ This approach provides several benefits:
 The project consists of the following files:
 
 * `todo_api.py`: A wrapper class to interact with the ToDo API endpoints.</br>
-* tests/
-    * `test_utils.py`: Utility functions to generate new task payloads.</br>
-    * `test_todo_api.py`: Test cases written with Pytest to validate the functionality of the ToDo API.</br>
+* `tests/test_utils.py`: Utility functions to generate new task payloads.</br>
+* `tests/test_todo_api.py`: Test cases written with Pytest to validate the functionality of the ToDo API.</br>
 
 ##
 
