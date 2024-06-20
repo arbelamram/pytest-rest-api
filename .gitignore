@@ -1,7 +1,16 @@
-notes.md
+# This file
+.gitignore
+
+# Caching
 __pycache__
 .pytest_cache
-desktop.ini
-.gitignore
+
+# System files
 .env
 .vscode
+
+# Documentation
+notes.md
+
+# Folder custom Styling
+desktop.ini
