@@ -13,11 +13,12 @@ By following the principles of OOP, the code is modular, maintainable, and easy 
 - [Getting Started](#getting-started)
 - [Tests](#tests)
 - [Contributing](#contributing)
+- [License](#license)
 
 ##
 
 ### Objectives
-* **Automate API Testing**: To automate the ToDo API testing process to ensure its endpoints are functioning correctly.
+* **Automate API Testing**: To automate the ToDo API testing process to ensure its endpoints function correctly.
 * **Verify CRUD Operations**: To verify that the Create, Read, Update, and Delete operations of the ToDo API work as expected.
 * **Demonstrate Pytest Usage**: To demonstrate the use of Pytest for testing REST APIs.
 * **Utilize OOP Principles**: To utilize Object-Oriented Programming principles in designing the API wrapper.
@@ -49,11 +50,26 @@ The project consists of the following files:
 ##
 
 ### Getting Started
-* **Clone the Repository**: `git clone <repository-url>`
-* **Install Dependencies**: `pip install -r requirements.txt`</br>
-* **Configure Environment**: Update `test_config.yaml` and environment variables.
-* **Run Tests**: Execute pytest in the terminal.
+**Prerequisites**:
+* Python 3.7+
+* `pip` (Python package installer)
 
+**Clone the Repository**: `git clone <repository-url>`
+
+**Create a virtual environment**:
+```sh
+python -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+```
+
+**Install Dependencies**: `pip install -r requirements.txt`</br>
+
+**Set up environment variables**:</br>
+Create a .env file in the root directory and add the necessary environment variables:
+```sh
+TODO_API_BASE_URL=https://todo.pixegami.io
+# You may replace with any API base URL
+```
 
 ### Tests
 * **Unit Testing**: PyTest for Python
@@ -69,25 +85,29 @@ You can install them using pip:
     pip install pytest requests
     ```
 
-2. **Run the Tests**: concurrently OR single
-* Execute all the tests using Pytest: (concurrently)</br>
-    ```
+2. **Run the Tests**:
+* Execute all the tests **consecutively** using Pytest:
+    ```sh
     pytest-rest-api> python -m pytest -v -s tests\test_todo_api.py
     ```
     
-* Execute a specific test using Pytest: (single)
-
-    ```
+* Execute a specific single test using Pytest:
+    ```sh
     pytest-rest-api> python -m pytest -v -s tests\test_todo_api.py::TestToDoAPI::<TEST_NAME>
+    
+    # Replace <TEST_NAME> with either one of the tests: (CRUD)
+        1. test_create_task_variants
+        2. test_can_create_task
+        3. test_can_read_tasks_list
+        4. test_can_update_task_details
+        5. test_can_delete_task
     ```
-    * Replace <TEST_NAME> with either one of the tests: (CRUD)
-        1. test_can_create_task
-        2. test_can_read_tasks_list
-        3. test_can_update_task_details
-        4. test_can_delete_task
 
 ##
 
 ### Contributing
 Contributions to the project are welcome.</br>
 Please fork the repository, create a feature branch, and submit a pull request for review.
+
+### License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
