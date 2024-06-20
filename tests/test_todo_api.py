@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 from todo_api import ToDoAPI
 from test_utils import new_task_payload
 
-# Load environment variables from .env file for tests
+# Load environment variables from .env file
 load_dotenv()
 
 class DataHelper:
