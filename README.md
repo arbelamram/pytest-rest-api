@@ -1,21 +1,31 @@
 # REST API Testing with Pytest
 
+<!-- Badges -->
+![Python](https://img.shields.io/badge/Python-3.12-blue.svg)
+![Pytest](https://img.shields.io/badge/Pytest-8.2-green.svg)
+![Requests](https://img.shields.io/badge/Requests-2.28-green.svg)
+![LICENSE](https://img.shields.io/badge/LICENSE-MIT-black.svg)
+
 ### Overview
 This project demonstrates how to test a REST API using Pytest.</br>
 It includes utility functions to generate task payloads, a wrapper around the ToDo API to facilitate interaction with the endpoints, and a suite of tests to verify the functionality of the API.</br>
-By following the principles of OOP, the code is modular, maintainable, and easy to extend.
+Following the principles of OOP, the code is modular, maintainable, and easy to extend.
 
-### Table of Contents
-- [Objectives](#Objectives)
-- [Technologies and Tools](#technologies-and-tools)
-- [Object-Oriented Programming (OOP)](#object-oriented-programming-oop)
-- [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-- [Tests](#tests)
-- [Contributing](#contributing)
-- [License](#license)
+## Table of Contents
+- [Description](#description)
+    - [Objectives](#objectives)
+    - [Technologies and Tools](#technologies-and-tools)
+    - [Object-Oriented Programming (OOP)](#object-oriented-programming-oop)
+- [Usage](#usage)
+    - [Getting Started](#getting-started)
+    - [Testing](#testing)
+- [Additional Information](#additional-information)
+    - [Contributing](#contributing)
+    - [Contact](#contact)
+    - [Acknowledgments](#acknowledgments)
+    - [License](#license)
 
-##
+## Description
 
 ### Objectives
 * **Automate API Testing**: To automate the ToDo API testing process to ensure its endpoints function correctly.
@@ -39,38 +49,41 @@ This approach provides several benefits:
 * **Maintainability**: Any changes to the API endpoints or methods can be managed within the `ToDoAPI` class without affecting the test cases directly.
 
 
-### Project Structure
-The project consists of the following files:
-
-* `todo_api.py`: A wrapper class to interact with the ToDo API endpoints.</br>
-* `tests/test_utils.py`: Utility functions to generate new task payloads.</br>
-* `tests/test_todo_api.py`: Test cases written with Pytest to validate the functionality of the ToDo API.</br>
-
-##
+## Usage
 
 ### Getting Started
-**Prerequisites**:
-* Python 3.7+
-* `pip` (Python package installer)
 
-**Clone the Repository**: `git clone <repository-url>`
+1. **Prerequisites**:
+    * Python 3.12+
+    * `pip` (Python package installer)
 
-**Create a virtual environment**:
-```sh
-python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-```
+2. **Clone the Repository**: 
+    ```sh
+    git clone <repository-url>
+    ```
 
-**Install Dependencies**: `pip install -r requirements.txt`</br>
+3. **Create a virtual environment**:
+    ```sh
+    python -m venv venv
+    source venv/bin/activate  
+    ```
+    * On Windows use:
+    ```sh
+    venv\Scripts\activate
+    ```
 
-**Set up environment variables**:</br>
-Create a .env file in the root directory and add the necessary environment variables:
-```sh
-TODO_API_BASE_URL=https://todo.pixegami.io
-# You may replace with any API base URL
-```
+4. **Install Dependencies**:
+    ```sh
+    pip install -r requirements.txt
+    ```
 
-### Tests
+5. **Set up environment variables**:
+    Create a `.env` file in the root directory and add the necessary environment variables:
+    ```sh
+    TODO_API_BASE_URL=https://todo.pixegami.io
+    ```
+
+### Testing
 * **Unit Testing**: PyTest for Python
 * **Integration Testing**: Postman for API testing
 * **End-to-End Testing**: Selenium for web applications
@@ -90,7 +103,7 @@ You can install them using pip:
     pytest-rest-api> python -m pytest -v -s tests\test_todo_api.py
     ```
     
-* Execute a specific single test using Pytest:
+* Execute a specific test using Pytest:
     ```sh
     pytest-rest-api> python -m pytest -v -s tests\test_todo_api.py::TestToDoAPI::<TEST_NAME>
     
@@ -102,11 +115,28 @@ You can install them using pip:
         5. test_can_delete_task
     ```
 
-##
+
+
+## Additional Information
 
 ### Contributing
 Contributions to the project are welcome.</br>
 Please fork the repository, create a feature branch, and submit a pull request for review.
 
+### Contact
+
+If you have any questions or suggestions, feel free to reach out:
+
+- Email: [ArbelAmram@github.com](mailto:arbelamram@github.com)
+- GitHub: [https://github.com/ArbelAmram](https://github.com/ArbelAmram)
+
+### Acknowledgments
+
+- Inspiration:
+    * [PyTest REST API Integration Testing with Python](https://www.youtube.com/watch?v=7dgQRVqF1N0)
+- Resources:
+    * [Badges](https://img.shields.io)
+
 ### License
+
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
