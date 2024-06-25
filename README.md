@@ -128,7 +128,6 @@ Please fork the repository, create a feature branch, and submit a pull request f
 If you have any questions or suggestions, feel free to reach out:
 
 - Email: [ArbelAmram@github.com](mailto:arbelamram@github.com)
-- GitHub: [https://github.com/ArbelAmram](https://github.com/ArbelAmram)
 
 ### Acknowledgments
 
