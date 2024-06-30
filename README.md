@@ -131,7 +131,6 @@ If you have any questions or suggestions, feel free to reach out:
 
 ### Acknowledgments
 
-- Inspiration: [PyTest REST API Integration Testing with Python](https://www.youtube.com/watch?v=7dgQRVqF1N0)
 - Resources: [Badges](https://img.shields.io)
 
 ### License
